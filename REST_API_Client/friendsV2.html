@@ -1,0 +1,37 @@
+
+<div class="container col-md-4" ng-controller="friendcntl">
+<h3>search user to add to friends list</h3>
+<div class="from form-group">
+<input type="text" name="user" ng-model="user" ng-keyup="complete(user)" class="form-control" />  
+                     <ul class="list-group" ng-model="hidethis" ng-hide="hidethis">  
+                          <li class="list-group-item" ng-repeat="user in filterUser track by $index" ng-click="fillTextbox(user.username)">{{user.username}}</li>  
+                     </ul>
+</div>
+<div class="from form-group">
+<button type="submit" class="btn btn-primary" ng-click="add(user)" >add</button>
+</div>
+<div class="alert alert-success" ng-if="addfeedback">
+  <strong>Info!</strong> {{addfeedback}}
+   </div>
+<div class="alert alert-danger" ng-if="adderror">
+  <strong>Info!</strong> {{adderror}}
+   </div>
+<h1>Friends list</h1>
+<table class="table striped-table">
+  <tr ng-repeat="x in friends | orderBy : 'username'">
+    <td>{{ x.username }}</td>
+	<td>
+	<div class="from form-group">
+	<button type="submit" ng-click="remove(x.username)" class="btn btn-danger">delete</button>
+	</div>
+	</td>
+  </tr>
+</table>
+<div class="alert alert-success" ng-if="removefeedback">
+  <strong>Info!</strong> {{removefeedback}}
+   </div>
+<div class="alert alert-danger" ng-if="removeerror">
+  <strong>Info!</strong> {{removeerror}}
+   </div>
+ <a class="btn btn-link" href="#!menu"> back to home</a>
+</div>

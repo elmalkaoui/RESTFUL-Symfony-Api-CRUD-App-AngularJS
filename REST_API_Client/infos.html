@@ -1,0 +1,50 @@
+<!-- <!DOCTYPE html> -->
+<!-- <html lang="en" > -->
+
+<!-- <head> -->
+  <!-- <meta charset="UTF-8"> -->
+  <!-- <title>infos</title> -->
+      <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+	  <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script> -->
+	  <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script> -->
+<!-- </head> -->
+<!-- <body ng-app="myApp"> -->
+ <!-- <!-- ng-if="logged" onload="redirect()"> -->
+ 
+<div class="container" ng-controller="infoscntl">
+	<h1>My informations</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Username</th>
+                <td>{{ response.username }}</td>
+            </tr>
+			<tr>
+                <th>Email</th>
+                <td>{{ response.email }}</td>
+            </tr>
+            <tr>
+                <th>Age</th>
+                <td>{{ response.age }}</td>
+            </tr>
+            <tr>
+                <th>Famille</th>
+                <td>{{ response.famille }}</td>
+            </tr>
+            <tr>
+                <th>Race</th>
+                <td>{{ response.race }}</td>
+            </tr>
+            <tr>
+                <th>Nourriture</th>
+                <td>{{ response.nourriture }}</td>
+            </tr>
+        </tbody>
+    </table>
+<a class="btn btn-link" href="#!menu"> back to home</a>
+</div>
+
+<!-- <script  src="js/app.js"></script> -->
+<!-- </body> -->
+<!-- </html> -->

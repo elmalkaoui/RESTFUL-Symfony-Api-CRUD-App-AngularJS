@@ -1,0 +1,35 @@
+ <div class="container col-md-4" ng-controller="updatecntl">
+  <h2>Setting</h2>
+  <div class="alert alert-success"ng-if="feedback">
+  <strong>Info!</strong> your information successfly updated
+   </div>
+  <form>
+    <div class="form-group">
+      <label for="email">Username</label>
+      <input type="text" class="form-control"  ng-model="username" placeholder="{{response.username}}" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" class="form-control"  ng-model="email" placeholder="{{response.email}}" name="email" required>
+    </div>
+	<div class="form-group">
+      <label for="age">age</label>
+      <input type="text" class="form-control" ng-model="age" placeholder="{{response.age}}" name="age" required>
+    </div>
+	<div class="form-group">
+      <label for="race">race</label>
+      <input type="text" class="form-control"  ng-model="race" placeholder="{{response.race}}" name="race" required>
+    </div>
+	<div class="form-group">
+      <label for="famille">famille</label>
+      <input type="text" class="form-control"  ng-model="famille" placeholder="{{response.famille}}" name="famille" required>
+    </div>
+	<div class="form-group">
+      <label for="nourriture">nourriture</label>
+      <input type="text" class="form-control"  ng-model="nourriture" placeholder="{{response.nourriture}}" name="nourriture" required>
+    </div>
+    <button type="submit" class="btn btn-success" ng-click="update(username,email,age,race,famille,nourriture)">update</button>
+  </form>
+  <a class="btn btn-link" href="#!menu"> back to home</a>
+</div>
+

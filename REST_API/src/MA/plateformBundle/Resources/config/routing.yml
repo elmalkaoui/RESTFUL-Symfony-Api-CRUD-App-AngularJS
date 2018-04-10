@@ -1,0 +1,3 @@
+m_aplateform_homepage:
+    path:     /
+    defaults: { _controller: MAplateformBundle:Default:index }

@@ -1,0 +1,18 @@
+<div class="col-md-4" ng-controller="login">
+  <h2>login</h2>
+  <p color="red"> {{error}}</p>
+  <form >
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input type="text" class="form-control" id="username" placeholder="Enter username" name="username" ng-model="username" required>
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd" ng-model="password" required>
+    </div>
+	<div class="raw">
+    <button type="submit" class="btn btn-default" ng-click="login(username,password)">login</button>
+	<a class="btn btn-link" href="#!register"> register</a>
+	</div>
+  </form>
+</div>
